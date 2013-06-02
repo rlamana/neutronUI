@@ -1,0 +1,43 @@
+
+@import "../../system/css/prefix.less";
+@import "color.less";
+
+.app #display{
+	.accumulated-chart {
+		.flex(1);
+
+		&.scrollable {
+		    width: 100%;
+		    overflow: auto;
+		    position: relative;
+		}
+
+		& > .scrollable-wrapper {
+		    position: absolute;
+		    height: 100%;
+		}
+
+		ul.bars {
+			padding: 0;
+			margin: 0;
+
+			.display(flex);
+			.flex-flow(row);
+			
+			height: 100%;
+
+			& > .year {
+				display: block;
+				padding: 5px 10px 0 0;
+
+				width: 50px;
+				text-align: right;
+				list-style: none;
+
+				font-size: 20px;
+
+				color: @disabled;
+			}
+		}
+	}
+}

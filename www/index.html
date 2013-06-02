@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]>    <html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>Neutron</title>
+        <meta name="description" content="eyeOS Mobile">
+
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta http-equiv="cleartype" content="on">
+
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+        <!-- iPhone 5 -->
+        <!-- <link href="app/img/splash-640x1096.png"
+              media="(device-width: 320px) and (device-height: 568px)
+                 and (-webkit-device-pixel-ratio: 2)"
+              rel="apple-touch-startup-image"> -->
+
+        <link rel="apple-touch-icon-precomposed" href="app/img/icon.png">
+        <link rel="shortcut icon" href="app/img/icon.png">
+
+        <!-- For iOS web apps -->
+        <meta name="apple-touch-fullscreen" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+        <link href='http://fonts.googleapis.com/css?family=Cabin:400,500,600,700' rel='stylesheet' type='text/css'>
+        
+        <script type="text/javascript">
+            //This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026
+            (function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")
+        </script>
+
+        <link rel="stylesheet" href="system/css/normalize.css">
+        <link rel="stylesheet" href="neutron.css">
+    </head>
+
+    <body>
+        <script src="vendor/modernizr.js" type="text/javascript"></script>
+
+        <script src="vendor/cordova-2.5.0.js" type="text/javascript"></script>
+    	<script data-main="neutron.min" src="vendor/require.js" type="text/javascript"></script>
+        <!--<script data-main="boot.js" src="vendor/require.js" type="text/javascript"></script>-->
+        <script>
+            var app = {
+                // Application Constructor
+                initialize: function() {
+                    this.bindEvents();
+                },
+                // Bind Event Listeners
+                //
+                // Bind any events that are required on startup. Common events are:
+                // 'load', 'deviceready', 'offline', and 'online'.
+                bindEvents: function() {
+                    document.addEventListener('deviceready', this.onDeviceReady, false);
+                },
+                // deviceready Event Handler
+                //
+                // The scope of 'this' is the event. In order to call the 'receivedEvent'
+                // function, we must explicity call 'app.receivedEvent(...);'
+                onDeviceReady: function() {
+                    app.receivedEvent('deviceready');
+                },
+                
+                // Update DOM on a Received Event
+                receivedEvent: function(id) {
+                   
+                }
+            };
+        </script>        
+    </body>
+</html>

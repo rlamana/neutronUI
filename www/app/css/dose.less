@@ -1,0 +1,108 @@
+
+@import "../../system/css/prefix.less";
+@import "color.less";
+
+@color-time: 1.5s;
+
+.app #display {
+	.current-dose {
+		color: #53a0cd;
+		-webkit-transition: 
+			color @color-time ease-in-out,
+			-webkit-transform .5s ease-in-out;
+
+		height: 200px;
+
+		.display(flex);
+		.flex-flow(column);
+		.align-items(center);
+		.justify-content(flex-end);
+
+		& > h2 {
+			text-transform: uppercase;
+			font-weight: 100;
+			font-size: 16px;
+			opacity: .8;
+
+			padding: 0;
+			margin: 5px;
+		}
+
+		& > p.bubble:before {
+			content: "";
+			position: absolute;
+			bottom: -15px;
+			left: 42%;
+			border-width: 20px 20px 0;
+			border-style: solid;
+
+			border-color: inherit;
+
+			display: block;
+			width: 0;
+		}
+
+		& > p.bubble {
+			position: relative;
+
+			padding: 15px 35px 15px 50px;
+			margin: 0;
+			margin-bottom: 30px;
+			border: 0;
+
+			color: white;
+			text-align: center;
+
+			background-color: @normal;
+			border-color: @normal transparent;
+			border-width: 0;
+			-webkit-transition: background-color @color-time ease-in-out, 
+				border-color @color-time ease-in-out;
+			
+			-webkit-border-radius: 6px;
+			border-radius: 6px;
+
+			font-size: 85px;
+			letter-spacing: -7px;
+
+			width: 150px;
+
+			.units {
+				vertical-align: 160%; 
+				font-size: 22px;
+				font-weight: 100;
+				letter-spacing: 0px;
+				opacity: .9;
+
+				padding-left: 8px;
+			}
+		}
+	}
+
+	.current-dose.warning {
+		color: @warning;
+
+		& > p.bubble {
+			background-color: @warning;
+			border-color: @warning transparent;
+		}
+	}
+
+	.current-dose.danger {
+		color: @danger;
+
+		& > p.bubble {
+			background-color: @danger;
+			border-color: @danger transparent;
+		}
+	}
+
+	.current-dose.good {
+		color: @good;
+
+		& > p.bubble {
+			background-color: @good;
+			border-color: @good transparent;
+		}
+	}
+}
