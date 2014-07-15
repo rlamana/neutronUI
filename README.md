@@ -1,5 +1,6 @@
 Neutron UI
 ====
+![Neutron](http://rlamana.es/img/neutron.png)
 
 Working prototype of the user interface for a connected Neutron dosimeter to an iOS device. The hardware measures radiation and other physical parameters.
 
